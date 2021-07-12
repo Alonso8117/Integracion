@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import bandana, carro, historial, identificador, index, correas, agregar_carrito, eliminar_producto_carrito, inicio, register, iniciar_sesion, aut_user, crear_usuario, guardar_venta
+from .views import bandana, carro, compra, historial, identificador, index, correas, agregar_carrito, eliminar_producto_carrito, inicio, register, iniciar_sesion, aut_user, crear_usuario, guardar_venta
 urlpatterns = [
     path('', inicio, name="inicio"),
     path('inicio', index, name='index'),

@@ -108,4 +108,5 @@ def guardar_venta(request):
     return redirect('index')
 
 
-def Exito-compra(request):
+def compra(request):
+    return('compra.html')
