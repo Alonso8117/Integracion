@@ -1,3 +1,4 @@
+from typing_extensions import Required
 from django.shortcuts import redirect, render
 from .models import DetalleVenta, Producto, Carrito, Usuario, Venta
 import logging
