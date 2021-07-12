@@ -45,14 +45,18 @@ def bandana(request):
     contexto = {"producto": productos}
     return render(request, 'core/bandanas.html', contexto)
 
+
 def inicio(request):
     return render(request, 'core/inicio.html')
+
 
 def register(request):
     return render(request, 'core/register.html')
 
+
 def iniciar_sesion(request):
     return render(request, 'core/iniciar_sesion.html')
+
 
 def agregar_carrito(request, id):
     carrito = Carrito(usuario='123456789', producto_id=id)
@@ -61,7 +65,8 @@ def agregar_carrito(request, id):
 
 
 def eliminar_producto_carrito(request, id):
-    carrito = Carrito.objects.filter(producto_id=id).filter(usuario='123456789')
+    carrito = Carrito.objects.filter(
+        producto_id=id).filter(usuario='123456789')
     carrito.delete()
     return redirect('carro')
 
@@ -78,7 +83,8 @@ def crear_usuario(request):
     telefono = request.POST['telefono']
     email = request.POST['correo']
     clave = request.POST['clave']
-    user = Usuario(rut=rut,nombre= nombre, n_telefono=telefono, correo= email, contra=clave)
+    user = Usuario(rut=rut, nombre=nombre, n_telefono=telefono,
+                   correo=email, contra=clave)
     user.save()
     return redirect('iniciar_sesion')
 
@@ -88,13 +94,17 @@ def guardar_venta(request):
     total = 0
     productos = []
     for c in carritos:
-        total = total +  c.producto.precio
+        total = total + c.producto.precio
         print(c.producto.id_producto)
         productos.append(c.producto.id_producto)
-        detalleVenta = DetalleVenta(usuario_id='123456789',producto_id=c.producto.id_producto,cantidad=1, total=c.producto.precio)
+        detalleVenta = DetalleVenta(
+            usuario_id='123456789', producto_id=c.producto.id_producto, cantidad=1, total=c.producto.precio)
         detalleVenta.save()
-    venta = Venta(total_venta=total,descuento = 0, usuario_id='123456789')
+    venta = Venta(total_venta=total, descuento=0, usuario_id='123456789')
     venta.save()
     carrito = Carrito.objects.filter(usuario='123456789')
     carrito.delete()
     return redirect('index')
+
+
+def Exito-compra(request):
