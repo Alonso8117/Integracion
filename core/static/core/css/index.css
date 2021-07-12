@@ -2,31 +2,6 @@
   text-align: center;
 }
 
-/* Menu */
-
-.cf:before, .cf:after {
-  content: " ";
-  display: table;
-}
-
-.cf:after {
-  clear: both;
-}
-
-.cf {
-  *zoom: 1;
-}
-
-/* Mini reset, no margins, paddings or bullets */
-
-.menu, .submenu {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-/* Main level */
-
 .menu {
   margin: 50px auto;
   width: 800px;
@@ -37,7 +12,7 @@
 }
 
 .menu>li {
-  background: #34495e;
+  background: rgb(1, 177, 118);
   float: left;
   position: relative;
   transform: skewX(25deg);
@@ -45,7 +20,7 @@
 
 .menu a {
   display: block;
-  color: #fff;
+  color: black;
   text-transform: uppercase;
   text-decoration: none;
   font-family: Arial, Helvetica;
@@ -53,7 +28,7 @@
 }
 
 .menu li:hover {
-  background: #e74c3c;
+  background: #C7FFD8;
 }
 
 .menu>li>a {

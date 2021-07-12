@@ -37,7 +37,7 @@
 }
 
 .menu>li {
-  background: #34495e;
+  background: rgb(1, 177, 118);
   float: left;
   position: relative;
   transform: skewX(25deg);
@@ -45,7 +45,7 @@
 
 .menu a {
   display: block;
-  color: #fff;
+  color: black;
   text-transform: uppercase;
   text-decoration: none;
   font-family: Arial, Helvetica;
@@ -53,7 +53,7 @@
 }
 
 .menu li:hover {
-  background: #e74c3c;
+  background: #C7FFD8;
 }
 
 .menu>li>a {
