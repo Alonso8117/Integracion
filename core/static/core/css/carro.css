@@ -1,0 +1,36 @@
+.carro-img {
+    height: 165px;
+}
+
+.carro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carro-row {
+    width: 25%;
+}
+
+.carro-eliminar {
+    background-color: red;
+}
+
+.carro-eliminar:hover {
+    background-color: #ae4444;
+}
+
+.carro-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carro-guardar {
+    background-color: #2183a2;
+}
+
+
+.carro-guardar:hover {
+    background-color: #15566a;
+}
