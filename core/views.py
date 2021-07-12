@@ -106,7 +106,3 @@ def guardar_venta(request):
     carrito = Carrito.objects.filter(usuario='123456789')
     carrito.delete()
     return redirect('index')
-
-
-def compra(request):
-    return('compra.html')

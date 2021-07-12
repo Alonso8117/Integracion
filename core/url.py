@@ -16,5 +16,5 @@ urlpatterns = [
     path('aut_user', aut_user, name="aut_user"),
     path('crear_usuario', crear_usuario, name="crear_usuario"),
     path('guardar_venta', guardar_venta, name="guardar_venta"),
-    path('compra', compra, name='compra'),
+
 ]
